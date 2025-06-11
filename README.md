@@ -1,6 +1,7 @@
 # Data Warehouse and Analytics Project
 
 Welcome to the **Data Warehouse and Analytics Portfolio Project** repository!
+
 This project exemplifies a complete data warehousing and analytics lifecycle, from warehouse development to the extraction of meaningful insights, adhering to industry best practices in data engineering and analytics.
 
 ## 🧮 Data Architecture
