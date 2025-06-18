@@ -1,5 +1,5 @@
 #Data Gold Layer
-
+---
 ### gold.dim_crm_info
 
 | Category | DAtatype | Comments |
