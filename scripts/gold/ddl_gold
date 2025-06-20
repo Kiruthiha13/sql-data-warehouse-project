@@ -17,6 +17,9 @@ Usage:
 -- =============================================================================
 -- Create Dimension: gold.dim_customers
 -- =============================================================================
+USE DataWarehouse;
+GO
+
 IF OBJECT_ID('gold.dim_customers', 'V') IS NOT NULL
     DROP VIEW gold.dim_customers;
 GO
@@ -28,7 +31,10 @@ SELECT
     ci.cst_key                         AS customer_number,
     ci.cst_firstname                   AS first_name,
     ci.cst_lastname                    AS last_name,
-    la.cntry                           AS country,
+    CASE 
+        WHEN la.cntry IS NULL OR TRIM(la.cntry) = '' THEN 'n/a' 
+        ELSE la.cntry  			  
+    END                                AS country,
     ci.cst_marital_status              AS marital_status,
     CASE 
         WHEN ci.cst_gndr != 'n/a' THEN ci.cst_gndr -- CRM is the primary source for gender
