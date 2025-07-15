@@ -191,8 +191,6 @@ BEGIN
 
 			-- Loading silver.erp_loc_a101 table
 		SET @start_time = GETDATE();
-	PRINT '>> Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + ' seconds';
-    PRINT '>> -------------';
 			PRINT '>> Truncating Table: silver.erp_loc_a101';
 			TRUNCATE TABLE silver.erp_loc_a101;
 			PRINT '>> Inserting Data Into: silver.erp_loc_a101';
