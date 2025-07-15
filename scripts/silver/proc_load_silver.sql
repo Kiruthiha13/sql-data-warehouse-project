@@ -26,7 +26,7 @@ BEGIN
 	DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME
 	BEGIN TRY
 		SET @batch_start_time = GETDATE();
-		PRINT '================================================';
+	PRINT '================================================';
         PRINT 'Loading Silver Layer';
         PRINT '================================================';
 
@@ -242,7 +242,7 @@ BEGIN
 	END TRY
 	BEGIN CATCH
 		PRINT '=========================================='
-		PRINT 'ERROR OCCURED DURING LOADING BRONZE LAYER'
+		PRINT 'ERROR OCCURED DURING LOADING SILVER LAYER'
 		PRINT 'Error Message' + ERROR_MESSAGE();
 		PRINT 'Error Message' + CAST (ERROR_NUMBER() AS NVARCHAR);
 		PRINT 'Error Message' + CAST (ERROR_STATE() AS NVARCHAR);
