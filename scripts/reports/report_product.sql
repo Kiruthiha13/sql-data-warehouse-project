@@ -34,9 +34,9 @@ WITH base_query AS (
 1) Base Query: Retrieves core columns from fact_sales and dim_products
 ---------------------------------------------------------------------------*/
     SELECT
-	    f.order_number,
+	f.order_number,
         f.order_date,
-		f.customer_key,
+	f.customer_key,
         f.sales_amount,
         f.quantity,
         p.product_key,
